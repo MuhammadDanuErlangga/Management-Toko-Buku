@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function search(Request $request)
+    public function index(Request $request)
     {
         $query = Book::query();
 
