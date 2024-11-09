@@ -18,18 +18,6 @@ class SaleController extends Controller
         return view('sales.index', compact('sales'));
     }
 
-    public function exportPdf()
-    {
-        try {
-            $sales = Sale::with('book')->get();
-            $pdf = Pdf::loadView('sales.pdf', compact('sales'));
-            return $pdf->download('riwayat_penjualan.pdf');
-        } catch (\Exception $e) {
-            Log::error('PDF export error: ' . $e->getMessage());
-            return back()->withErrors('Gagal membuat PDF. Silakan cek log.');
-        }
-    }
-
     public function show($id)
     {
     // Temukan data penjualan berdasarkan ID

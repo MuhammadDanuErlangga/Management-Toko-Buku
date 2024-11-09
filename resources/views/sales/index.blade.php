@@ -14,9 +14,6 @@
                 </div>
             @endif
 
-            <!-- Tombol Ekspor PDF -->
-            <a href="{{ route('sales.pdf') }}" class="btn btn-danger mb-3"><i class="fas fa-file-pdf"></i> Ekspor ke PDF</a>
-
             <!-- Tabel Riwayat Penjualan -->
             <table class="table table-striped table-hover mt-3">
                 <thead class="table-dark">
